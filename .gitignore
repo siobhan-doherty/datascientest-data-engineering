@@ -1,0 +1,11 @@
+nosql-mongodb/sample_training/.mongodb/
+nosql-mongodb/sample_training/diagnostic.data/
+nosql-mongodb/sample_training/journal/
+nosql-mongodb/sample_training/.bash_history
+nosql-mongodb/sample_training/WiredTiger*
+nosql-mongodb/sample_training/_mdb_catalog.wt
+nosql-mongodb/sample_training/collection-*
+nosql-mongodb/sample_training/index-*
+nosql-mongodb/sample_training/mongod.lock
+nosql-mongodb/sample_training/sizeStorer.wt
+nosql-mongodb/sample_training/storage.bson
