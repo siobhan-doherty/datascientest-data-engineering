@@ -1,0 +1,200 @@
+['admin', 'config', 'local', 'sample']
+['cie', 'books', 'grades', 'weather', 'zips']
+{'_id': ObjectId('6815e8fd3674d782d2383fc0'),
+ 'authors': ['W. Frank Ableson', 'Charlie Collins', 'Robi Sen'],
+ 'categories': ['Open Source', 'Mobile'],
+ 'isbn': '1933988673',
+ 'longDescription': 'Android is an open source mobile phone platform based on '
+                    'the Linux operating system and developed by the Open '
+                    'Handset Alliance, a consortium of over 30 hardware, '
+                    'software and telecom companies that focus on open '
+                    'standards for mobile devices. Led by search giant, '
+                    'Google, Android is designed to deliver a better and more '
+                    'open and cost effective mobile experience.    Unlocking '
+                    "Android: A Developer's Guide provides concise, hands-on "
+                    'instruction for the Android operating system and '
+                    'development tools. This book teaches important '
+                    'architectural concepts in a straightforward writing style '
+                    'and builds on this with practical and useful examples '
+                    'throughout. Based on his mobile development experience '
+                    'and his deep knowledge of the arcane Android technical '
+                    'documentation, the author conveys the know-how you need '
+                    'to develop practical applications that build upon or '
+                    'replace any of Androids features, however small.    '
+                    "Unlocking Android: A Developer's Guide prepares the "
+                    'reader to embrace the platform in easy-to-understand '
+                    'language and builds on this foundation with re-usable '
+                    'Java code examples. It is ideal for corporate and '
+                    'hobbyists alike who have an interest, or a mandate, to '
+                    "deliver software functionality for cell phones.    WHAT'S "
+                    "INSIDE:        * Android's place in the market      * "
+                    'Using the Eclipse environment for Android '
+                    'development      * The Intents - how and why they are '
+                    'used      * Application classes:            o '
+                    'Activity            o Service            o '
+                    'IntentReceiver       * User interface design      * Using '
+                    'the ContentProvider to manage data      * Persisting data '
+                    'with the SQLite database      * Networking examples      '
+                    '* Telephony applications      * Notification methods      '
+                    '* OpenGL, animation & multimedia      * Sample '
+                    'Applications  ',
+ 'pageCount': 416,
+ 'publishedDate': {'$date': '2009-04-01T00:00:00.000-0700'},
+ 'shortDescription': "Unlocking Android: A Developer's Guide provides concise, "
+                     'hands-on instruction for the Android operating system '
+                     'and development tools. This book teaches important '
+                     'architectural concepts in a straightforward writing '
+                     'style and builds on this with practical and useful '
+                     'examples throughout.',
+ 'status': 'PUBLISH',
+ 'thumbnailUrl': 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg',
+ 'title': 'Unlocking Android'}
+431
+157
+155
+4
+[{'_id': None,
+  'cat0': ['Next Generation Databases',
+           'Object-Oriented Programming',
+           'Business',
+           'PowerBuilder',
+           'Java',
+           'Internet',
+           'XML',
+           'Mobile Technology',
+           'Algorithmic Art',
+           'Networking',
+           'internet',
+           'Client-Server',
+           'Miscellaneous',
+           'Open Source',
+           'In Action',
+           'Theory',
+           'Web Development',
+           'Microsoft .NET',
+           'Perl',
+           'Software Engineering',
+           'Python',
+           'Microsoft/.NET',
+           'java',
+           'Programming',
+           'PHP',
+           'Computer Graphics',
+           'Object-Technology Programming',
+           'SOA',
+           'Microsoft'],
+  'cat1': ['Java',
+           '',
+           'Internet',
+           'S',
+           'Perl',
+           'Software Engineering',
+           'Theory',
+           'Business',
+           'Mobile',
+           '.NET',
+           'Computer Graphics',
+           'P',
+           'Open Source',
+           'Software Development',
+           'Python',
+           'Networking',
+           'Client-Server']}]
+131
+[{'_id': 'Next Generation Databases', 'avg': 0.0, 'max': 0, 'min': 0},
+ {'_id': 'Object-Oriented Programming', 'avg': 408.5, 'max': 512, 'min': 350},
+ {'_id': 'Business', 'avg': 404.1666666666667, 'max': 696, 'min': 180},
+ {'_id': 'PowerBuilder', 'avg': 433.7142857142857, 'max': 550, 'min': 362},
+ {'_id': 'SOA', 'avg': 250.0, 'max': 250, 'min': 250},
+ {'_id': 'Computer Graph', 'avg': 400.0, 'max': 400, 'min': 400},
+ {'_id': 'Client Server', 'avg': 368.0, 'max': 368, 'min': 368},
+ {'_id': 'Java', 'avg': 412.21875, 'max': 1088, 'min': 0},
+ {'_id': '', 'avg': 284.0, 'max': 368, 'min': 200},
+ {'_id': 'Internet', 'avg': 441.2439024390244, 'max': 912, 'min': 0},
+ {'_id': 'S', 'avg': 350.0, 'max': 350, 'min': 350},
+ {'_id': 'XML', 'avg': 482.0, 'max': 680, 'min': 304},
+ {'_id': 'Mobile Technology', 'avg': 296.5, 'max': 504, 'min': 0},
+ {'_id': 'Miscella', 'avg': 0.0, 'max': 0, 'min': 0},
+ {'_id': 'Algorithmic Art', 'avg': 0.0, 'max': 0, 'min': 0},
+ {'_id': 'Client-Server', 'avg': 516.0, 'max': 1101, 'min': 220},
+ {'_id': 'Networking', 'avg': 366.42857142857144, 'max': 591, 'min': 0},
+ {'_id': 'internet', 'avg': 400.0, 'max': 400, 'min': 400},
+ {'_id': 'Miscellaneous', 'avg': 706.0, 'max': 1096, 'min': 316},
+ {'_id': 'P', 'avg': 512.0, 'max': 512, 'min': 512},
+ {'_id': 'Open Source', 'avg': 474.0, 'max': 532, 'min': 416},
+ {'_id': 'In Action', 'avg': 0.0, 'max': 0, 'min': 0},
+ {'_id': 'Theory', 'avg': 420.42857142857144, 'max': 591, 'min': 280},
+ {'_id': 'Software Development', 'avg': 600.0, 'max': 600, 'min': 600},
+ {'_id': 'Web Development', 'avg': 441.47058823529414, 'max': 688, 'min': 300},
+ {'_id': 'Microsoft .NET', 'avg': 437.02941176470586, 'max': 848, 'min': 0},
+ {'_id': 'Mobile', 'avg': 416.0, 'max': 416, 'min': 416},
+ {'_id': 'Perl', 'avg': 385.3333333333333, 'max': 504, 'min': 304},
+ {'_id': 'Software Engineering', 'avg': 287.75, 'max': 544, 'min': 0},
+ {'_id': 'Python', 'avg': 482.3333333333333, 'max': 688, 'min': 350},
+ {'_id': 'Microsoft/.NET', 'avg': 0.0, 'max': 0, 'min': 0},
+ {'_id': 'java', 'avg': 0.0, 'max': 0, 'min': 0},
+ {'_id': 'Programming', 'avg': 362.1666666666667, 'max': 570, 'min': 0},
+ {'_id': '.NET', 'avg': 925.0, 'max': 925, 'min': 925},
+ {'_id': 'Computer Graphics', 'avg': 520.3333333333334, 'max': 840, 'min': 328},
+ {'_id': 'Object-Technology Programming', 'avg': 200.0, 'max': 200, 'min': 200},
+ {'_id': 'PHP', 'avg': 552.0, 'max': 552, 'min': 552},
+ {'_id': 'Microsoft', 'avg': 572.375, 'max': 925, 'min': 344}]
+[]
+[{'_id': ObjectId('6815e8fd3674d782d2383fc0'),
+  'author_1': 'W. Frank Ableson',
+  'author_2': 'Charlie Collins',
+  'author_3': 'Robi Sen'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc1'),
+  'author_1': 'W. Frank Ableson',
+  'author_2': 'Robi Sen'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc2'), 'author_1': 'Gojko Adzic'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc3'),
+  'author_1': 'Tariq Ahmed with Jon Hirschi',
+  'author_2': 'Faisal Abid'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc4'),
+  'author_1': 'Tariq Ahmed',
+  'author_2': 'Dan Orlando',
+  'author_3': 'John C. Bland II',
+  'author_4': 'Joel Hooks'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc5'), 'author_1': 'Satnam Alag'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc6'),
+  'author_1': 'Rob Allen',
+  'author_2': 'Nick Lo',
+  'author_3': 'Steven Brown'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc7'),
+  'author_1': 'Bernerd Allmon',
+  'author_2': 'Jeremy Anderson'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc8'),
+  'author_1': 'Andres Almiray',
+  'author_2': 'Danno Ferrin',
+  'author_3': '',
+  'author_4': 'James Shingler'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fc9'),
+  'author_1': 'Alexandre de Castro Alves'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fca'), 'author_1': 'Peter Armstrong'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fcb'), 'author_1': 'Peter Armstrong'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fcc'),
+  'author_1': 'Levi Asher',
+  'author_2': 'Christian Crumlish'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fcd'), 'author_1': 'Jamil Azher'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fce'),
+  'author_1': 'Kyle Baley',
+  'author_2': 'Donald Belcham'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fcf'), 'author_1': 'Kyle Banker'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fd0'),
+  'author_1': 'Michael J. Barlotta'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fd1'), 'author_1': 'Michael Barlotta'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fd2'),
+  'author_1': 'Michael J. Barlotta',
+  'author_2': 'Jason R. Weiss'},
+ {'_id': ObjectId('6815e8fd3674d782d2383fd3'), 'author_1': 'Jon Barrilleaux'}]
+[{'_id': None, 'count': 37},
+ {'_id': 'Vikram Goyal', 'count': 12},
+ {'_id': 'Don Jones', 'count': 6},
+ {'_id': 'Christian Bauer', 'count': 4},
+ {'_id': 'Craig Walls', 'count': 4},
+ {'_id': 'Erik Hatcher', 'count': 3},
+ {'_id': 'Ted Neward', 'count': 3},
+ {'_id': 'Jeffrey Palermo', 'count': 3},
+ {'_id': 'Dave Crane', 'count': 3},
+ {'_id': 'Bear Bibeault', 'count': 3}]
