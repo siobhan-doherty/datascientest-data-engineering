@@ -12,3 +12,14 @@ nosql-mongodb/sample_training/storage.bson
 .env
 pyspark/.ipynb_checkpoints
 pyspark/.venv
+pyspark/books.avro
+pyspark/books.orc/_SUCCESS
+pyspark/books.orc/._SUCCESS.crc
+pyspark/books.orc/.part-00000-05ee3065-61fe-4c91-b52d-6f46dcce3160-c000.snappy.orc.crc
+pyspark/books.orc/.part-00001-05ee3065-61fe-4c91-b52d-6f46dcce3160-c000.snappy.orc.crc
+pyspark/books.orc/part-00000-05ee3065-61fe-4c91-b52d-6f46dcce3160-c000.snappy.orc
+pyspark/books.orc/part-00001-05ee3065-61fe-4c91-b52d-6f46dcce3160-c000.snappy.orc
+pyspark/gps_app.parquet/_SUCCESS
+pyspark/gps_app.parquet/._SUCCESS.crc
+pyspark/gps_app.parquet/.part-00000-1c4b6456-9501-4dd9-b7f7-b9c19fd733cc-c000.snappy.parquet.crc
+pyspark/gps_app.parquet/part-00000-1c4b6456-9501-4dd9-b7f7-b9c19fd733cc-c000.snappy.parquet
