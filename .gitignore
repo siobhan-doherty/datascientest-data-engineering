@@ -10,3 +10,5 @@ nosql-mongodb/sample_training/mongod.lock
 nosql-mongodb/sample_training/sizeStorer.wt
 nosql-mongodb/sample_training/storage.bson
 .env
+pyspark/.ipynb_checkpoints
+pyspark/.venv
