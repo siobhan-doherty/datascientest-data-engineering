@@ -23,3 +23,5 @@ pyspark/gps_app.parquet/_SUCCESS
 pyspark/gps_app.parquet/._SUCCESS.crc
 pyspark/gps_app.parquet/.part-00000-1c4b6456-9501-4dd9-b7f7-b9c19fd733cc-c000.snappy.parquet.crc
 pyspark/gps_app.parquet/part-00000-1c4b6456-9501-4dd9-b7f7-b9c19fd733cc-c000.snappy.parquet
+pyspark/exam/pyspark_exam_SIOBHAN.zip
+pyspark/exam/mysql-connector-j-8.3.0.jar
