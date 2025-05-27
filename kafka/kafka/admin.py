@@ -2,34 +2,41 @@ import argparse
 from kafka.admin import KafkaAdminClient, NewTopic
 
 
-kafka_admin_client = KafkaAdminClient(
-  bootstrap_servers="localhost:9092"
-)
+admin = KafkaAdminClient(
+    bootstrap_servers=[
+      "3.255.181.220:9092",
+      "3.255.181.220:9093",
+      "3.255.181.220:9094"
+    ],
+    client_id="admin"
+  )
 
-def delete_topic(topic):
-  kafka_admin_client.delete_topics([topic])
-  print(f"Topic '{topic}' deleted.")
+def create_topic(name, partitions, replication):
+    topic = NewTopic(
+        name=name,
+        num_partitions=partitions,
+        replication_factor=replication
+    )
+    admin.create_topics([topic])
+    print(f"Topic '{name}' created")
 
-def create_topic(topic, num_partitions, replication_factor):
-  topic_list = [
-    NewTopic(name=topic, num_partitions=num_partitions, replication_factor=replication_factor)
-  ]
-  kafka_admin_client.create_topics(topic_list)
+def delete_topic(name):
+  admin.delete_topics([name])
+  print(f"Topic '{name}' deleted")
 
-  print(f"Topic '{topic}' created.")
 
 if __name__ == "__main__":
-  parser = argparse.ArgumentParser(description="Admin Kafka Topics.")
-  parser.add_argument("action", choices=["create", "delete"], type=str, nargs=1)
-  parser.add_argument("-n", "--name", type=str, required=True, help="Name of the topic")
-  parser.add_argument("-p", "--partition", type=int, help="Number of partitions (only used in create mode)", default=1)
-  parser.add_argument("-r", "--replication", type=int, help="Replication factor (only used in create mode)", default=1)
-
+  parser = argparse.ArgumentParser(description="Admin Kafka Topics")
+  parser.add_argument("action", choices=["create", "delete"])
+  parser.add_argument("-n","--name", required=True, help="Topic name")
+  parser.add_argument("-p","--partitions", type=int, default=4)
+  parser.add_argument("-r","--replication", type=int, default=3)
   args = parser.parse_args()
 
-  action = args.action[0]
-
-  if action == "delete":
+  if args.action == "create":
+    create_topic(args.name, args.partitions, args.replication)
+  else:
     delete_topic(args.name)
-  elif action == "create":
-    create_topic(args.name, args.partition, args.replication)
+
+  admin.close()
+
