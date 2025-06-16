@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  jupyter:
+    image: jupyter/minimal-notebook:ubuntu-18.04
+  elasticsearch:
+    image: elasticsearch:7.2.0
