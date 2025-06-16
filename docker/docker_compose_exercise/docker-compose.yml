@@ -5,13 +5,15 @@ services:
     container_name: my_jupyter_from_compose
     networks: 
       - my_network_from_compose
+    volumes:
+      - .:/home/jovyan/work
     ports: 
       - target: 8888
         published: 4444
         protocol: tcp
         mode: host
     environment:
-      JUPYTER_TOKEN: 'hello'
+      JUPYTER_TOKEN: 'bonjour'
   elasticsearch:
     image: elasticsearch:7.2.0
     container_name: my_es_from_compose
