@@ -2,6 +2,11 @@ version: '3.9'
 services:
   jupyter:
     image: jupyter/minimal-notebook:ubuntu-18.04
+    ports: 
+      - target: 8888
+        published: 4444
+        protocol: tcp
+        mode: host
   elasticsearch:
     image: elasticsearch:7.2.0
     environment:
