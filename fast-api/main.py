@@ -1,15 +1,10 @@
-from fastapi import FastAPI
-from typing import Optional
-from pydantic import BaseModel
+from fastapi import FastAPI, Header
 
 
 api = FastAPI()
 
-class Item(BaseModel):
-    itemid: int
-    description: str
-    owner: Optional[str] = None
-
-@api.post('/item')
-def post_item(item: Item):
-    return item
+@api.get('/headers')
+def get_headers(user_agent: str = Header(None)):
+    return {
+        'User-Agent': user_agent
+    }
