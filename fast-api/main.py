@@ -1,10 +1,13 @@
-from fastapi import FastAPI, Header
+from fastapi import FastAPI # type: ignore
 
 
-api = FastAPI()
+api = FastAPI(
+    title = "My API",
+    description = "My own API powered by FastAPI.",
+    version = "1.0.1"
+)
 
-@api.get('/headers')
-def get_headers(user_agent: str = Header(None)):
-    return {
-        'User-Agent': user_agent
-    }
+@api.get("/", name = "Hello World")
+def get_index():
+    """Returns greetings"""
+    return {"greetings": "welcome"}
