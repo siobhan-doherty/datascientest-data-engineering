@@ -1,27 +1,11 @@
 from fastapi import FastAPI # type: ignore
 
 
-api = FastAPI(openapi_tags = [
-    {
-        "name": "home",
-        "description": "default functions"
-    },
-    {
-        "name": "items",
-        "description": "functions that are used to deal with items"
-    }
-])
+api = FastAPI()
+data = [1, 2, 3, 4, 5]
 
-@api.get("/", tags = ["home"])
-def get_index():
-    """returns greetings"""
+@api.get("/data")
+def get_data(index):
     return {
-        "greetings": "hello world"
-    }
-
-@api.get("/items", tags = ["home", "items"])
-def get_items():
-    """returns an item"""
-    return {
-        "item": "some item"
+        "data": data[int(index)]
     }
