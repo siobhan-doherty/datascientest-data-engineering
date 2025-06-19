@@ -1,0 +1,17 @@
+
+──── Authentication ────
+alice:wonderland -> expected 200, got 200 -> SUCCESS
+bob:builder -> expected 200, got 200 -> SUCCESS
+clementine:mandarine -> expected 403, got 403 -> SUCCESS
+
+──── Authorisation ────
+bob@/v1/sentiment -> exp 200, got 200 -> SUCCESS
+bob@/v2/sentiment -> exp 403, got 403 -> SUCCESS
+alice@/v1/sentiment -> exp 200, got 200 -> SUCCESS
+alice@/v2/sentiment -> exp 200, got 200 -> SUCCESS
+
+──── Content ────
+/v1/sentiment 'life is beautiful' -> expect positive, got 0.5994 -> SUCCESS
+/v1/sentiment 'that sucks' -> expect negative, got -0.3612 -> SUCCESS
+/v2/sentiment 'life is beautiful' -> expect positive, got 0.5994 -> SUCCESS
+/v2/sentiment 'that sucks' -> expect negative, got -0.3612 -> SUCCESS

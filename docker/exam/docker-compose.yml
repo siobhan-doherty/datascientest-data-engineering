@@ -1,0 +1,53 @@
+version: '3.9'
+
+services:
+  api:
+    image: datascientest/fastapi:1.0.0
+    container_name: exam_api
+    ports: ["8000:8000"]
+    networks: [exam_net]
+
+  authentication_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.authentication
+    container_name: exam_authentication_test
+    depends_on: [api]
+    environment:
+      API_ADDR: api
+      API_PORT: 8000
+      LOG: "1"
+    networks: [exam_net]
+    volumes:
+      - ./api_output:/api_output
+
+  authorisation_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.authorisation
+    container_name: exam_authorisation_test
+    depends_on: [api]
+    environment:
+      API_ADDR: api
+      API_PORT: 8000
+      LOG: "1"
+    networks: [exam_net]
+    volumes:
+      - ./api_output:/api_output
+
+  content_test:
+    build:
+      context: .
+      dockerfile: Dockerfile.content
+    container_name: exam_content_test
+    depends_on: [api]
+    environment:
+      API_ADDR: api
+      API_PORT: 8000
+      LOG: "1"
+    networks: [exam_net]
+    volumes:
+      - ./api_output:/api_output
+
+networks:
+  exam_net:
