@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI # type: ignore
 import time
 import asyncio
 
@@ -20,5 +20,6 @@ def get_sync():
 
 @api.get("/async")
 async def get_async():
-    wait_async()
+    await wait_async()
     return {"message": "asynchronous"}
+ 
