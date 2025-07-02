@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mariadb-deployment
+  labels:
+    app: mariadb
+spec:
+  serviceName: "maria"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mariadb
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      containers:
+        - name: mariadb
+          image: docker.io/mariadb:10.4
+          ports:
+            - containerPort: 3306
+              protocol: TCP
+
+          # ---- mount Secrets as env vars ----
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mariadb-datascientest-rootpass
+                  key: password
+          envFrom:
+            - secretRef:
+                name: mariadb-user-datascientest
+
+          # ---- mount volumes into the container ----
+          volumeMounts:
+            # persistent data
+            - name: mariadb-volume-1
+              mountPath: /var/lib/mysql
+            # custom config from ConfigMap
+            - name: mariadb-datascientest-config-volume
+              mountPath: /etc/mysql/conf.d
+
+      # ---- define volumes ----
+      volumes:
+        - name: mariadb-volume-1
+          emptyDir: {}
+        # pull in max_allowed_packet.cnf from ConfigMap
+        - name: mariadb-datascientest-config-volume
+          configMap:
+            name: mariadb-datascientest-config
+            items:
+              - key: max_allowed_packet.cnf
+                path: max_allowed_packet.cnf
