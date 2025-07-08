@@ -1,0 +1,1 @@
+[2025-07-08T10:35:02.977+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: weather_pipeline.train_random_forest scheduled__2025-07-08T10:32:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
