@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: user-api-dev
+    meta.helm.sh/release-namespace: dev
+  creationTimestamp: "2025-07-08T16:21:37Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: user-api-dev-datascientest-chart
+  namespace: dev
+  resourceVersion: "50917"
+  uid: d230791f-ef6a-40e9-becd-323e453611df
+spec:
+  clusterIP: 10.43.207.93
+  clusterIPs:
+  - 10.43.207.93
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app.kubernetes.io/instance: user-api-dev
+    app.kubernetes.io/name: datascientest-chart
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

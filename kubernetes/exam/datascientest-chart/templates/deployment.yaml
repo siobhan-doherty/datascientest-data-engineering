@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "datascientest-chart.fullname" . }}
+  labels:
+    {{- include "datascientest-chart.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "datascientest-chart.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "datascientest-chart.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: mysql
+          image: datascientest/mysql-k8s:1.0.0
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "datascientest-chart.fullname" . }}-db
+                  key: mysql-password
+            - name: MYSQL_DATABASE
+              value: Main
+          ports:
+            - containerPort: 3306
+        - name: fastapi
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            - name: MYSQL_HOST
+              value: localhost
+            - name: MYSQL_USER
+              value: root
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "datascientest-chart.fullname" . }}-db
+                  key: mysql-password
+            - name: MYSQL_DATABASE
+              value: Main
+          ports:
+            - containerPort: {{ .Values.service.port }}

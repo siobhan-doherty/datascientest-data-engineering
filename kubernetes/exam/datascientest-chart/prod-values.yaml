@@ -1,0 +1,14 @@
+replicaCount: 3
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 60
+
+ingress:
+  enabled: true
+  hosts:
+    - host: api.example.com
+      paths:
+        - path: /
+          pathType: Prefix

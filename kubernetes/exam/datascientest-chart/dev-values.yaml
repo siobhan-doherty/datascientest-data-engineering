@@ -1,0 +1,11 @@
+replicaCount: 1
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: true
+  hosts:
+    - host: dev.example.com
+      paths:
+        - path: /
+          pathType: Prefix
